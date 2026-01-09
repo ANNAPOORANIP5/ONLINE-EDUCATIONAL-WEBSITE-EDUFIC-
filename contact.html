@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edufic - Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* FULL BACKGROUND */
+        body {
+            background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+        }
+
+        /* DARK OVERLAY */
+        .overlay {
+            background: rgba(0, 0, 0, 0.65);
+            height: 100%;
+            width: 100%;
+        }
+
+        /* NAVBAR */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        nav a:hover {
+            opacity: 1;
+            border-bottom: 2px solid #0d6efd;
+        }
+
+        /* HERO CONTENT */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 80px);
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(6px);
+            padding: 40px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 420px;
+            color: white;
+        }
+
+        .contact-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: #0d6efd;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #084298;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-box {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+
+        <!-- NAVBAR -->
+        <header>
+            <h1>Edufic</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                
+
+                </ul>
+            </nav>
+        </header>
+
+        <!-- CENTER CONTENT -->
+        <div class="content">
+            <div class="contact-box">
+                <h2>Contact Us</h2>
+
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Your Message" required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

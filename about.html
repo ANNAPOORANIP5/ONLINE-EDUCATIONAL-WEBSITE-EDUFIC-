@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edufic - About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* RESET & BASIC */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* FULLSCREEN ANIMATED GRADIENT BACKGROUND */
+        body {
+            background: linear-gradient(270deg, #667eea, #764ba2, #ff6a00, #ff416c);
+            background-size: 800% 800%;
+            animation: gradientAnimation 20s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* DARK OVERLAY */
+        .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* NAVBAR */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            opacity: 0.85;
+            padding-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            opacity: 1;
+            border-bottom: 2px solid #00ffcc;
+        }
+
+        /* ABOUT CONTENT */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .about-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .about-box:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .about-box h2 {
+            font-size: 38px;
+            margin-bottom: 25px;
+            color: #00ffcc;
+        }
+
+        .about-box p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .about-box {
+                padding: 30px 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay">
+
+        <!-- NAVBAR -->
+        <header>
+            <h1>Edufic</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" class="active">About</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ABOUT CONTENT -->
+        <div class="content">
+            <div class="about-box">
+                <h2>About Edufic</h2>
+                <p>
+                    Edufic is a cutting-edge learning platform dedicated to empowering students
+                    with industry-ready skills and hands-on experience in modern technologies.
+                </p>
+                <p>
+                    Our areas of expertise include Web Development, Data Analytics, Cloud Computing,
+                    and AI-driven learning, providing learners with practical knowledge for real-world success.
+                </p>
+                <p>
+                    Our mission is to bridge the gap between education and employment through
+                    interactive and practical training programs.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
